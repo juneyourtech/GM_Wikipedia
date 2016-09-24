@@ -2,17 +2,18 @@
 // @name        wikipedia_vector
 // @namespace   wikipedia
 // @description Set appearance for normal desktop screens
+// @updateURL https://github.com/martrootamm/GM_Wikipedia/raw/master/wikipedia_vector.user.js
 // @include     *.wikipedia.org/w*
 // @include     *.wikimedia.org/w*
 // @include     *.wiktionary.org/w*
 // @include     *.wikibooks.org/w*
 // @include     *.wikitravel.org/w*
 // @include     *.wikiversity.org/w*
-// @version     1
+// @version     1.0
 // @grant       GM_addStyle
 // ==/UserScript==
 
-//VISITED COLOR
+//:commons:VISITED COLOR. I have a plan to move it to a separate userscript.
 GM_addStyle("@media screen {A:visited {color:MediumPurple; text-decoration:underline; background:linear-gradient(to right, yellow, transparent 50%, transparent 100%) !important;} }") //visited color WORKS, background-color doesn't. SlateBlue is ok.
 
 //Sidebar languages
