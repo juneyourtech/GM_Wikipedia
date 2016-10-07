@@ -1,7 +1,7 @@
-﻿// ==UserScript==
+// ==UserScript==
 // @name        wikipedia_vector
-// @namespace   wikipedia
-// @description Set appearance for normal desktop screens
+// @namespace   wikipedia_vector
+// @description Set appearance for normal desktop screens. The appearance is different in Vector and Monobook themes.
 // @updateURL https://github.com/martrootamm/GM_Wikipedia/raw/master/wikipedia_vector.user.js
 // @include     *.wikipedia.org/w*
 // @include     *.wikimedia.org/w*
@@ -9,7 +9,7 @@
 // @include     *.wikibooks.org/w*
 // @include     *.wikitravel.org/w*
 // @include     *.wikiversity.org/w*
-// @version     1.0
+// @version     1.0.1
 // @grant       GM_addStyle
 // ==/UserScript==
 
@@ -75,13 +75,21 @@ GM_addStyle('BODY[class~=skin-monobook] DIV.portlet .pBody UL:hover LI[class~=in
 
 //COMMONS
 //Wikimedia Commons
-GM_addStyle("DIV UL.mw-gallery-traditional {margin-left:0px; margin-right:0px !important; padding-left:0px; padding-right:0px !important}") //works!! ; //was UL.gallery
+GM_addStyle("DIV.ui-buttonset {margin-right:1px;}")
+
+GM_addStyle("DIV UL.mw-gallery-traditional {margin-left:3px; margin-right:0px !important; padding-left:0px; padding-right:0px !important}") //works. //other selector is UL.gallery
 
 /* This does not really work.
 GM_addStyle("UL.mw-gallery-traditional LI.gallerybox {width:149px !important;}") //was UL.gallery */
 
 //GALLERY: TRADITIONAL
-GM_addStyle("UL.mw-gallery-traditional LI.gallerybox DIV.thumb {margin-left:0px;}") //works
+GM_addStyle("UL.mw-gallery-traditional > LI.gallerybox {margin-left:-3px;}") //works; temporarily set: width:155px !important;
+
+GM_addStyle("UL.mw-gallery-traditional > LI.gallerybox > DIV {width:unset !important;}") //works; margin-right works somehow
+
+GM_addStyle("UL.mw-gallery-traditional > LI.gallerybox DIV.thumb {margin-left:0px; margin-right:0px; width:unset !important;}") //works; margin-right works somehow
+
+GM_addStyle("UL.mw-gallery-traditional > LI.gallerybox DIV.gallerytext {margin-left:0px; margin-right:0px;}") //works
 
 //GALLERY: PACKED
 GM_addStyle("DIV UL.mw-gallery-packed {margin-left:0px; margin-right:0px; padding-left:0px; padding-right:0px;}") //
