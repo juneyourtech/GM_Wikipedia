@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        wikipedia_vector
 // @namespace   wikipedia_vector
-// @description Set appearance for normal desktop screens. The appearance is different in Vector and Monobook themes.
+// @description Set appearance for normal desktop screens. The look is different in Vector and Monobook themes.
 // @updateURL https://github.com/martrootamm/GM_Wikipedia/raw/master/wikipedia_vector.user.js
 // @include     *.wikipedia.org/w*
 // @include     *.wikimedia.org/w*
@@ -9,7 +9,7 @@
 // @include     *.wikibooks.org/w*
 // @include     *.wikitravel.org/w*
 // @include     *.wikiversity.org/w*
-// @version     1.0.1
+// @version     1.0.1.1
 // @grant       GM_addStyle
 // ==/UserScript==
 
